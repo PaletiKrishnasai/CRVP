@@ -20,8 +20,9 @@ def y_predict():
     '''
     For rendering results on HTML GUI
     '''
-    # x_test = [[int(x) for x in request.form.values()]]
-    # print(x_test)
+    
+    x_test = [[int(x) for x in request.form.values()]]
+    print(x_test)
     # sc=load('scalar8.save')
     # prediction = model.predict(sc.transform(x_test))
     # print(prediction)

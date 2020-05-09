@@ -207,7 +207,7 @@
 		  </div>
 		  <div class="row justify-content-center">
 			<div class="col-lg-7 mb-5">
-			  	<form action="/y_predict" class="p-5 bg-white" method="POST">
+			  	<!-- <form action="/y_predict" class="p-5 bg-white" method="POST">
 					<h2 class="h4 text-black mb-5">Enter the details</h2> 
 					<div class="row form-group">
 						<div class="col-md-6 mb-3 mb-md-0">
@@ -595,7 +595,390 @@
 				{% if prediction_text %}
 					<h4><span style="border-style: double;padding: 5px;">The expected resale value is {{prediction_text}}</span></h4>
 				{% endif %}
-			  </form>
+			  </form> -->
+
+			  		<form action="{{ url_for('y_predict')}}"method="post" class="p-5 bg-white">
+			  			<h2 class="h4 text-black mb-5">Enter the details</h2>
+			  			<div class="row form-group">
+			  				<div class="col-md-12">
+			  				<div class="my">
+    <select name="abtest" required="required">
+          <option value="">Select abtest </option>
+          <option value=0>control</option>
+          <option value=1>test</option>
+        </select>
+    </div>
+    <div class="my">
+    <select name="vehicleType" required="required">
+          <option value="">Select vehicleType </option>
+          <option value=0>andere</option>
+          <option value=1>bus</option>
+          <option value=2>cabrio</option>
+          <option value=3>coupe</option>
+          <option value=4>kleinwagen</option>
+          <option value=5>kombi</option>
+          <option value=6>limousine</option>
+          <option value=7>suv</option>
+          
+        </select>
+    </div>
+    	<div class="my">
+			<!-- <label for="yearOfRegistration">Year Of Registration</label> -->
+			<input type="text" name="Yor" placeholder="Year Of Registration" required="required">
+		</div>
+		<div class="my">
+    <select name="gearbox" required="required">
+          <option value="">Select gearbox </option>
+          <option value=0>automatik</option>
+          <option value=1>manuell</option>
+        </select>
+    </div>
+    <div class="my">
+			<!-- <label for="PowerPs">PowerPS</label> -->
+			<input type="text" name="PowerPs" placeholder="PowerPS" required="required">
+
+		</div>
+		<div class="my">
+			 <select name="model" required="required">
+          <option value="">Select Model </option>
+          <option value=0>100</option>
+          <option value=1>145</option>
+          <option value=2>147</option>
+          <option value=3>156</option>
+          <option value=4>159</option>
+          <option value=5>1_reihe</option>
+          <option value=6>1er</option>
+          <option value=7>200</option>
+          <option value=8>2_reihe</option>
+          <option value=9>300c</option>
+          <option value=10>3_reihe</option>
+          <option value=11>3er</option>
+          <option value=12>4_reihe</option>
+          <option value=13>500</option>
+          <option value=14>5_reihe</option>
+          <option value=15>5er</option>
+          <option value=16>601</option>
+          <option value=17>6_reihe</option>
+          <option value=18>6er</option>
+          <option value=19>7er</option>
+          <option value=20>80</option>
+          <option value=21>850</option>
+          <option value=22>90</option>
+          <option value=23>900</option>
+          <option value=24>9000</option>
+          <option value=25>911</option>
+          <option value=26>a1</option>
+          <option value=27>a2</option>
+          <option value=28>a3</option>
+          <option value=29>a4</option>
+          <option value=30>a5</option>
+          <option value=31>a6</option>
+          <option value=32>a8</option>
+          <option value=33>a_klasse</option>
+          <option value=34>accord</option>
+          <option value=35>agila</option>
+          <option value=36>alhambra</option>
+          <option value=37>almera</option>
+          <option value=38>altea</option>
+          <option value=39>amarok</option>
+          <option value=40>andere</option>
+          <option value=41>antara</option>
+          <option value=42>arosa</option>
+          <option value=43>astra</option>
+          <option value=44>auris</option>
+          <option value=45>avensis</option>
+          <option value=46>aveo</option>
+          <option value=47>aygo</option>
+          <option value=48>b_klasse</option>
+          <option value=49>b_max</option>
+          <option value=50>beetle</option>
+          <option value=51>berlingo</option>
+          <option value=52>bora</option>
+          <option value=53>boxster</option>
+          <option value=54>bravo</option>
+          <option value=55>c1</option>
+          <option value=56>c2</option>
+          <option value=57>c3</option>
+          <option value=58>c4</option>
+          <option value=59>c5</option>
+          <option value=60>c_klasse</option>
+          <option value=61>c_max</option>
+          <option value=62>c_reihe</option>
+          <option value=63>caddy</option>
+          <option value=64>calibra</option>
+          <option value=65>captiva</option>
+          <option value=66>carisma</option>
+          <option value=67>carnival</option>
+          <option value=68>cayenne</option>
+          <option value=69>cc</option>
+          <option value=70>ceed</option>
+          <option value=71>charade</option>
+          <option value=72>cherokee</option>
+          <option value=73>citigo</option>
+          <option value=74>civic</option>
+          <option value=75>cl</option>
+          <option value=76>clio</option>
+          <option value=77>clk</option>
+          <option value=78>clubman</option>
+          <option value=79>colt</option>
+          <option value=80>combo</option>
+          <option value=81>cooper</option>
+          <option value=82>cordoba</option>
+          <option value=83>corolla</option>
+          <option value=84>corsa</option>
+          <option value=85>cr_reihe</option>
+          <option value=86>croma</option>
+          <option value=87>crossfire</option>
+          <option value=88>cuore</option>
+          <option value=89>cx_reihe</option>
+          <option value=90>defender</option>
+          <option value=91>delta</option>
+          <option value=92>discovery</option>
+          <option value=93>discovery_sport</option>
+          <option value=94>doblo</option>
+          <option value=95>ducato</option>
+          <option value=96>duster</option>
+          <option value=97>e_klasse</option>
+          <option value=98>elefantino</option>
+          <option value=99>eos</option>
+          <option value=100>escort</option>
+          <option value=101>espace</option>
+          <option value=102>exeo</option>
+          <option value=103>fabia</option>
+          <option value=104>fiesta</option>
+          <option value=105>focus</option>
+          <option value=106>forester</option>
+          <option value=107>forfour</option>
+          <option value=108>fortwo</option>
+          <option value=109>fox</option>
+          <option value=110>freelander</option>
+          <option value=111>fusion</option>
+          <option value=112>g_klasse</option>
+          <option value=113>galant</option>
+          <option value=114>galaxy</option>
+          <option value=115>getz</option>
+          <option value=116>gl</option>
+          <option value=117>glk</option>
+          <option value=118>golf</option>
+          <option value=119>grand</option>
+          <option value=120>i3</option>
+          <option value=121>i_reihe</option>
+          <option value=122>ibiza</option>
+          <option value=123>impreza</option>
+          <option value=124>insignia</option>
+          <option value=125>jazz</option>
+          <option value=126>jetta</option>
+          <option value=127>jimny</option>
+          <option value=128>juke</option>
+          <option value=129>justy</option>
+          <option value=130>ka</option>
+          <option value=131>kadett</option>
+          <option value=132>kaefer</option>
+          <option value=133>kalina</option>
+          <option value=134>kalos</option>
+          <option value=135>kangoo</option>
+          <option value=136>kappa</option>
+          <option value=137>kuga</option>
+          <option value=138>laguna</option>
+          <option value=139>lancer</option>
+          <option value=140>lanos</option>
+          <option value=141>legacy</option>
+          <option value=142>leon</option>
+          <option value=143>lodgy</option>
+          <option value=144>logan</option>
+          <option value=145>lupo</option>
+          <option value=146>lybra</option>
+          <option value=147>m_klasse</option>
+          <option value=148>m_reihe</option>
+          <option value=149>materia</option>
+          <option value=150>matiz</option>
+          <option value=151>megane</option>
+          <option value=152>meriva</option>
+          <option value=153>micra</option>
+          <option value=154>mii</option>
+          <option value=155>modus</option>
+          <option value=156>mondeo</option>
+          <option value=157>move</option>
+          <option value=158>musa</option>
+          <option value=159>mustang</option>
+          <option value=160>mx_reihe</option>
+          <option value=161>navara</option>
+          <option value=162>niva</option>
+          <option value=163>note</option>
+          <option value=164>nubira</option>
+          <option value=165>octavia</option>
+          <option value=166>omega</option>
+          <option value=167>one</option>
+          <option value=168>outlander</option>
+          <option value=169>pajero</option>
+          <option value=170>panda</option>
+          <option value=171>passat</option>
+          <option value=172>phaeton</option>
+          <option value=173>picanto</option>
+          <option value=174>polo</option>
+          <option value=175>primera</option>
+          <option value=176>ptcruiser</option>
+          <option value=177>punto</option>
+          <option value=178>q3</option>
+          <option value=179>q5</option>
+          <option value=180>q7</option>
+          <option value=181>qashqai</option>
+          <option value=182>r19</option>
+          <option value=183>range_rover</option>
+          <option value=184>range_rover_evoque</option>
+          <option value=185>range_rover_sport</option>
+          <option value=186>rangerover</option>
+          <option value=187>rav</option>
+          <option value=188>rio</option>
+          <option value=189>roadster</option>
+          <option value=190>roomster</option>
+          <option value=191>rx_reihe</option>
+          <option value=192>s60</option>
+          <option value=193>s_klasse</option>
+          <option value=194>s_max</option>
+          <option value=195>s_type</option>
+          <option value=196>samara</option>
+          <option value=197>sandero</option>
+          <option value=198>santa</option>
+          <option value=199>scenic</option>
+          <option value=200>scirocco</option>
+          <option value=201>seicento</option>
+          <option value=202>serie_1</option>
+          <option value=203>serie_2</option>
+          <option value=204>serie_3</option>
+          <option value=205>sharan</option>
+          <option value=206>signum</option>
+          <option value=207>sirion</option>
+          <option value=208>s1</option>
+          <option value=209>slk</option>
+          <option value=210>sorento</option>
+          <option value=211>spark</option>
+          <option value=212>spider</option>
+          <option value=213>sportage</option>
+          <option value=214>sprinter</option>
+          <option value=215>stilo</option>
+          <option value=216>superb</option>
+          <option value=217>swift</option>
+          <option value=218>terios</option>
+          <option value=219>tigra</option>
+          <option value=220>tiguan</option>
+          <option value=221>toledo</option>
+          <option value=222>touareg</option>
+          <option value=223>touran</option>
+          <option value=224>transit</option>
+          <option value=225>transporter</option>
+          <option value=226>tt</option>
+          <option value=227>tucson</option>
+          <option value=228>twingo</option>
+          <option value=229>up</option>
+          <option value=230>v40</option>
+          <option value=231>v50</option>
+          <option value=232>v60</option>
+          <option value=233>v70</option>
+          <option value=234>v_klasse</option>
+          <option value=235>vectra</option>
+          <option value=236>verso</option>
+          <option value=237>viano</option>
+          <option value=238>vito</option>
+          <option value=239>vivaro</option>
+          <option value=240>voyager</option>
+          <option value=241>wrangler</option>
+          <option value=242>x_reihe</option>
+          <option value=243>x_trail</option>
+          <option value=244>x_type</option>
+          <option value=245>xc_reihe</option>
+          <option value=246>yaris</option>
+          <option value=247>yeti</option>
+          <option value=248>ypsilon</option>
+          <option value=249>z_reihe</option>
+          <option value=250>zafira</option>
+          <option value=251>California</option>
+        </select>
+    </div>
+    <div class="my">
+		<!-- <label for="kilometer">Kilo Meter</label> -->
+	<input type="text" name="kilometer" placeholder="Kilo Meter" required="required">
+
+</div>
+<div class="my">
+		<!-- <label for="monthOfRegistration">Month Of Registration</label> -->
+	<input type="text" name="monthOfRegistration" placeholder="Month Of Registration" required="required">
+        </div>
+        <div class="my">     
+    <select name="fuelType" required="required">
+          <option value="">Select fuelType </option>
+          <option value=0>andere</option>
+          <option value=1>benzin</option>
+          <option value=2>cng</option>
+          <option value=3>diesel</option>
+          <option value=4>elektro</option>
+          <option value=5>hybrid</option>
+          <option value=6>lpg</option>
+          
+        </select>
+    </div>
+    <div class="my">
+    <select name="brand" required="required">
+          <option value="">Select brand </option>
+          <option value=0>alfa_romeo</option>
+          <option value=1>audi</option>
+          <option value=2>bmw</option>
+          <option value=3>chevrolet</option>
+          <option value=4>chrysler</option>
+          <option value=5>citroen</option>
+          <option value=6>dacia</option>
+          <option value=7>daewoo</option>
+          <option value=8>daihatsu</option>
+          <option value=9>fiat</option>
+          <option value=10>ford</option>
+          <option value=11>honda</option>
+          <option value=12>hyundai</option>
+          <option value=13>jaguar</option>
+          <option value=14>jeep</option>
+          <option value=15>kia</option>
+          <option value=16>lada</option>
+          <option value=17>lancia</option>
+          <option value=18>land_rover</option>
+          <option value=19>mazda</option>
+          <option value=20>mercedes_benz</option>
+          <option value=21>mini</option>
+          <option value=22>mitsubishi</option>
+          <option value=23>nissan</option>
+          <option value=24>opel</option>
+          <option value=25>peugeot</option>
+          <option value=26>porsche</option>
+          <option value=27>renault</option>
+          <option value=28>rover</option>
+          <option value=29>saab</option>
+          <option value=30>seat</option>
+          <option value=31>skoda</option>
+          <option value=32>smart</option>
+          <option value=33>sonstige_autos</option>
+          <option value=34>subaru</option>
+          <option value=35>suzuki</option>
+          <option value=36>toyota</option>
+          <option value=37>trabant</option>
+          <option value=38>volkswagen</option>
+          <option value=39>volvo</option>
+        </select>
+    </div>
+    <div class="my">
+    <select name="notRepairedDamage" required="required">
+          <option value="">Select notRepairedDamage </option>
+          <option value=0>ja</option>
+          <option value=1>nein</option>
+        </select>
+    </div>
+    <div class="my">
+        	<input type="submit" value="Predict" class="btn btn-primary mr-2 mb-2" >
+	</div>
+			</div>
+			</div>
+			{% if prediction_text %}
+					<h4><span style="border-style: double;padding: 5px;color: blue">The expected resale value is {{prediction_text}}</span></h4>
+				{% endif %}
+		</form>
+
 			</div>
 		  
 		  </div>
