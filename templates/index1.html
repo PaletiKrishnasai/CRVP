@@ -5,25 +5,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="static/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../static/fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/jquery-ui.css">
-    <link rel="stylesheet" href="static/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/jquery-ui.css">
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="static/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../static/css/jquery.fancybox.min.css">
 
-    <link rel="stylesheet" href="static/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../static/css/bootstrap-datepicker.css">
 
-    <link rel="stylesheet" href="static/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="../static/fonts/flaticon/font/flaticon.css">
 
-    <link rel="stylesheet" href="static/css/aos.css">
+    <link rel="stylesheet" href="../static/css/aos.css">
 
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -84,7 +83,7 @@
 
           <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
             
-            <img src="static/images/undraw_investing_7u74.svg" alt="Image" class="img-fluid img-absolute">
+            <img src="../static/images/undraw_investing_7u74.svg" alt="Image" class="img-fluid img-absolute">
 
             <div class="row mb-4" data-aos="fade-up" data-aos-delay="200">
               <div class="col-lg-6 mr-auto">
@@ -207,6 +206,12 @@
 		  </div>
 		  <div class="row justify-content-center">
 			<div class="col-lg-7 mb-5">
+			  <form action="/y_predict" class="p-5 bg-white" method="POST">
+				<h2 class="h4 text-black mb-5">Enter the details</h2> 
+				<div class="row form-group">
+					<div class="col-md-6 mb-3 mb-md-0">
+						<div class="my">
+							<select name="abtest" required="required">
 			  	<form action="/y_predict" class="p-5 bg-white" method="POST">
 					<h2 class="h4 text-black mb-5">Enter the details</h2> 
 					<div class="row form-group">
@@ -591,11 +596,11 @@
 					<input type="submit" value="predict" class="btn btn-primary mr-2 mb-2" >
 				  </div>
 				</div>
-  
 				{% if prediction_text %}
 					<h4><span style="border-style: double;padding: 5px;">The expected resale value is {{prediction_text}}</span></h4>
 				{% endif %}
 			  </form>
+			  
 			</div>
 		  
 		  </div>
@@ -618,7 +623,7 @@
             <div class="person">
               <div class="bio-img">
                 <figure>
-                  <img src="static/images/yoga.jpeg" alt="Image" class="img-fluid team">
+                  <img src="../static/images/yoga.jpeg" alt="Image" class="img-fluid team">
                 </figure>
                 <div class="social">
                   <a href="#"><span class="icon-facebook"></span></a>
@@ -636,7 +641,7 @@
             <div class="person">
               <div class="bio-img">
                 <figure>
-                  <img src="static/images/john.jpg" alt="Image" class="img-fluid team">
+                  <img src="../static/images/john.jpg" alt="Image" class="img-fluid team">
                 </figure>
                 <div class="social">
                   <a href="#"><span class="icon-facebook"></span></a>
@@ -655,7 +660,7 @@
             <div class="person">
               <div class="bio-img">
                 <figure>
-                  <img src="static/images/pk.jpeg" alt="Image" class="img-fluid team">
+                  <img src="../static/images/pk.jpeg" alt="Image" class="img-fluid team">
                 </figure>
                 <div class="social">
                   <a href="#"><span class="icon-facebook"></span></a>
@@ -673,7 +678,7 @@
             <div class="person">
               <div class="bio-img">
                 <figure>
-                  <img src="static/images/dvss.jpeg" alt="Image" class="img-fluid team">
+                  <img src="../static/images/dvss.jpeg" alt="Image" class="img-fluid team">
                 </figure>
                 <div class="social">
                   <a href="#"><span class="icon-facebook"></span></a>
@@ -691,7 +696,7 @@
             <div class="person">
               <div class="bio-img">
                 <figure>
-                  <img src="static/images/rakesh.jpeg" alt="Image" class="img-fluid team">
+                  <img src="../static/images/rakesh.jpeg" alt="Image" class="img-fluid team">
                 </figure>
                 <div class="social">
                   <a href="#"><span class="icon-facebook"></span></a>
@@ -709,7 +714,7 @@
           	  	<div class="person">
               	<div class="bio-img">
                 	<figure>
-                  		<img src="static/images/jk.jpeg" alt="Image" class="img-fluid team">
+                  		<img src="../static/images/jk.jpeg" alt="Image" class="img-fluid team">
                 	</figure>
                 	<div class="social">
                   		<a href="#"><span class="icon-facebook"></span></a>
@@ -750,18 +755,18 @@
     </div>
   </div> <!-- .site-wrap -->
 
-  <script src="static/js/jquery-3.3.1.min.js"></script>
-  <script src="static/js/jquery-ui.js"></script>
-  <script src="static/js/popper.min.js"></script>
-  <script src="static/js/bootstrap.min.js"></script>
-  <script src="static/js/owl.carousel.min.js"></script>
-  <script src="static/js/jquery.countdown.min.js"></script>
-  <script src="static/js/bootstrap-datepicker.min.js"></script>
-  <script src="static/js/jquery.easing.1.3.js"></script>
-  <script src="static/js/aos.js"></script>
-  <script src="static/js/jquery.fancybox.min.js"></script>
-  <script src="static/js/jquery.sticky.js"></script>
-  <script src="static/js/main.js"></script>
+  <script src="../static/js/jquery-3.3.1.min.js"></script>
+  <script src="../static/js/jquery-ui.js"></script>
+  <script src="../static/js/popper.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/owl.carousel.min.js"></script>
+  <script src="../static/js/jquery.countdown.min.js"></script>
+  <script src="../static/js/bootstrap-datepicker.min.js"></script>
+  <script src="../static/js/jquery.easing.1.3.js"></script>
+  <script src="../static/js/aos.js"></script>
+  <script src="../static/js/jquery.fancybox.min.js"></script>
+  <script src="../static/js/jquery.sticky.js"></script>
+  <script src="../static/js/main.js"></script>
   
   </body>
 </html>

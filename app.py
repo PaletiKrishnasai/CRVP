@@ -27,7 +27,7 @@ def y_predict():
     # print(prediction)
     # output=prediction[0]
     output = 500000
-    return render_template('index.html', prediction_text='Price {}'.format(output))
+    return render_template('index.html', prediction_text='Rs {}'.format(output))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
